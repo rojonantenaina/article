@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Docker
+*.dockerfile
+
+# Environment variables
+*.env
+
+# Build outputs
+build/
+dist/
+
+# OS specific files
+.DS_Store
+Thumbs.db
