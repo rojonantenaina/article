@@ -1,13 +1,19 @@
-import { Button } from "@mui/material";
+import React from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { ArticlePage } from "./pages/article";
+import { SigninPage } from "./pages/auth/signin";
+import { SignupPage } from "./pages/auth/signup";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <Button sx={{ m: 2 }} variant="outlined">
-        MUI Work !
-      </Button>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<ArticlePage />} />
+        <Route path="/signin" element={<SigninPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
