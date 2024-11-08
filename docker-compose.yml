@@ -5,6 +5,8 @@ services:
       context: ./frontend
     ports:
       - "3000:80"
+    volumes:
+      - ./frontend:/app
     depends_on:
       - backend
 
@@ -13,6 +15,8 @@ services:
       context: ./backend
     ports:
       - "3001:3000"
+    volumes:
+      - ./backend:/app
     depends_on:
       - mariadb
     restart: on-failure
